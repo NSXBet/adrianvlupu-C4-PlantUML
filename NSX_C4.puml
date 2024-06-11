@@ -1,25 +1,2 @@
 !include https://raw.githubusercontent.com/nsxbet/adrianvlupu-C4-PlantUML/latest/C4.puml
-
-!unquoted procedure NSXRel($from, $to, $label)
-!$key_from = "present-" + $from
-!$exists_from = %variable_exists($key_from)
-!$key_to = "present-" + $to
-!$exists_to = %variable_exists($key_to)
-!$direction = "-->>"
-
-!if ($exists_from == "1") && ($exists_to == "1")
-$from $direction $to: **$label**
-!endif
-!endprocedure
-
-!unquoted procedure NSXRel($from, $to, $label, $techn)
-!$key_from = "present-" + $from
-!$exists_from = %variable_exists($key_from)
-!$key_to = "present-" + $to
-!$exists_to = %variable_exists($key_to)
-!$direction = "-->>"
-
-!if ($exists_from == "1") && ($exists_to == "1")
-$from $direction $to: **$label**\n//<size:$TECHN_FONT_SIZE>[$techn]</size>//
-!endif
-!endprocedure
+!include https://raw.githubusercontent.com/nsxbet/adrianvlupu-C4-PlantUML/latest/NSX_C4_Shared.puml
