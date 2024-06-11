@@ -1,0 +1,25 @@
+!include https://raw.githubusercontent.com/nsxbet/adrianvlupu-C4-PlantUML/latest/C4_Context.puml
+
+!unquoted procedure NSXSystem($alias, $label, $descr="", $sprite="")
+!$key = "present-" + $alias
+%set_variable_value($key, "1")
+rectangle "$getSystem($label, $descr, $sprite)" <<system>> as $alias
+!endprocedure
+
+!unquoted procedure NSXSystem_Ext($alias, $label, $descr="", $sprite="")
+!$key = "present-" + $alias
+%set_variable_value($key, "1")
+rectangle "$getSystem($label, $descr, $sprite)" <<external_system>> as $alias
+!endprocedure
+
+!unquoted procedure NSXPerson($alias, $label, $descr="", $sprite="")
+!$key = "present-" + $alias
+%set_variable_value($key, "1")
+rectangle "$getPerson($label, $descr, $sprite)" <<person>> as $alias
+!endprocedure
+
+!unquoted procedure NSXPerson_Ext($alias, $label, $descr="", $sprite="")
+!$key = "present-" + $alias
+%set_variable_value($key, "1")
+rectangle "$getPerson($label, $descr, $sprite)" <<external_person>> as $alias
+!endprocedure
